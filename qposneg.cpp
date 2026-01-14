@@ -14,6 +14,7 @@ int main () {
         else if (data < 0) {
             absneg.push(abs(data));
         }
+        if(cin.get() == '\n') break;
     }
     if (abspos.size() == absneg.size()) {
         int qsize = abspos.size();
