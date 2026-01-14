@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdio>
 using namespace std;
 
 struct node {
@@ -15,7 +14,7 @@ public:
     void add (int k, int x);
     int get (int k);
     void remove (int k);
-    int searchMF (int x);
+
 private:
     node *front,*rear;
 };
@@ -32,7 +31,6 @@ int list::size() {
     int count=0;
     node *n;
     n=front;
-
     while (n!=NULL) {
         count++;
         n=n->next;
@@ -56,11 +54,9 @@ void list::add(int k, int x) {
     }
     else {
         p=front;
-
         for (int i=1; i<k-1; i++) {
             p=p->next;
         }
-
         if (p==rear) {
             p->next=n;
             rear=n;
@@ -75,6 +71,7 @@ void list::add(int k, int x) {
 int list::get(int k) {
     node *n;
     n=front;
+
 
     if (k!=1) {
         for (int i=1; i<k; i++) {
@@ -97,7 +94,6 @@ void list::remove(int k) {
             p=n;
             n=n->next;
         }
-
         if (n==rear) {
             p->next=NULL;
             rear=p;
@@ -113,22 +109,19 @@ void list::remove(int k) {
 int main() {
     int N,K,X,M,count=0;
     list a;
-
     cin >> N;
-
     for (int i=0; i<N; i++) {
         cin >> K; cin >> X;
         a.add(K,X);
     }
-
     cin >> M;
-
     for (int i=0; i<M; i++) {
-        cin >> X;
-        count += a.searchMF(X);
+        cin >> K;
+        a.remove(K);
     }
-
-    cout << count << endl;
-
+    cin>>K;
+    cout << a.size();
+    cout<<" "<< a.get(K);
+    cout<<endl;
     return 0;
 }
