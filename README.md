@@ -1,6 +1,6 @@
-# PROGRAMMING INTRODUCTION
+# PROGRAMMING INTRODUCTION & PROGRAMMING TECHNIQUES
 
-Here are my solutions to the exercises from the "Computer Programming" course, taken during the first semester at the School of Electrical and Computer Engineering of the National Technical University of Athens.
+Here are my solutions to the exercises from the courses "Computer Programming" and "Programming Techniques", taken during the first and second semester respectivelly, at the School of Electrical and Computer Engineering of the National Technical University of Athens.
 
 Although some solutions might not be optimized for complexity, they successfully pass all test cases on "Grader".
 
